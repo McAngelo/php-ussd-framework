@@ -38,10 +38,6 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 // Instantiate the app settings
 $settings = require __DIR__ . '/Config/settings.php';
 
-
-//die(var_dump($settings));
-
-
 function customDebugLogger() {
     $settings = require __DIR__ . '/Config/settings.php';
     $log = new \Logs\BaseLog($settings['logger']['path'], $settings['logger']['name']);

@@ -1,6 +1,6 @@
 {
     "name": "UssdFramework",
-    "description": "This is the USSD application",
+    "description": "This is the PHP USSD Framework",
     "type": "project",
     "autoload": {
         "psr-0": {
