@@ -17,12 +17,15 @@ class MainController extends \UssdFramework\UssdController {
 
     private $_baseUrl;
     private $_header;
+    private $_date;
 
     public function __construct()
     {
         $this->_baseUrl = "http://localhost:8080/api/ussd/";
 
         $this->_header = "PHP UssdFramework";
+
+        $this->_date = date('Y-m-d H:i:s', time());
     }
     
     # Main startup method/action for the USSD
@@ -48,7 +51,7 @@ class MainController extends \UssdFramework\UssdController {
         $form = new  \UssdFramework\UssdForm('process_form_input');
 
         # set the name input field
-        $nameInput = new \UssdFramework\UssdInput('name', 'Enter number');
+        $nameInput = new \UssdFramework\UssdInput('name', 'Enter your name');
         $nameInput->header($formHeader);
         $form->addInput($nameInput);
 
@@ -64,16 +67,46 @@ class MainController extends \UssdFramework\UssdController {
 
     public function process_form_input()
     {
+        $formData = $this->getFormData();
 
+        $name = $formData['name'];
+        $society = $formData['gender'];    
+
+        $title = ($formData['gender'] == 'male' ? 'Mr.' : "Ms."); 
+
+        $message = "\nHello $title $name\n";
+        /*$message .= "Soc.: $society \n";
+        $message .= "Name: $farmerName \n";
+        $message .= "Phone: $phoneNumber\n";
+        $message .= "Proof: $proofType - $proofNumber\n";
+        $message .= "ECOM Number: $ecomNumber\nConfirm";*/
+
+        $menuHeader = "$this->_header : $message";
+
+        $menu = new \UssdFramework\UssdMenu();
+        $menu->header($menuHeader)
+                ->createAndAddItem('Thank you', 'close')
+                ->addItem(new \UssdFramework\UssdMenuItem('0', 'Gerrout', 'start'));
+        return $this->renderMenu($menu);
+    }
+
+    public function you_welcome()
+    {
+        $message = "$this->_header \n\nYou are welcome and have a nice day";
+        return $this->render($message);
     }
 
     public function list_items()
     {
         $menu = new \UssdFramework\UssdMenu();
         $menu->header($menuHeader)
-                ->createAndAddItem('14/03/2018 - GHs 200', 'e_menu')
-                ->createAndAddItem('13/03/2018 - GHs 130', 'e_menu')
-                ->createAndAddItem('12/03/2018 - GHs 320', 'e_menu')
+                ->createAndAddItem('Sunday', 'e_menu')
+                ->createAndAddItem('Monday', 'e_menu')
+                ->createAndAddItem('Tuesday', 'e_menu')
+                ->createAndAddItem('Wednesday', 'e_menu')
+                ->createAndAddItem('Thurday', 'e_menu')
+                ->createAndAddItem('Friday', 'e_menu')
+                ->createAndAddItem('Saturday', 'e_menu')
                 ->addItem(new \UssdFramework\UssdMenuItem('0', 'Back', 'e_menu'));
 
         return $this->renderMenu($menu);

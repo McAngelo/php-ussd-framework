@@ -1,6 +1,6 @@
 # USSD Framework in PHP
 
-Framework for building Ussd applications in PHP against the [SMSGH USSD API](http://developers.smsgh.com/documentations/ussd).
+Framework for building Ussd applications in PHP against the [Hubtel USSD API](http://developers.smsgh.com/documentations/ussd).
 
 ## Example Database Table Creation Statement
 ```sql
