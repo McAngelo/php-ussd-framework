@@ -15,18 +15,15 @@ use Api\ApiConnector;
 class UserController extends \UssdFramework\UssdController {
 
     private $_baseUrl;
-    private $_requestBody;
     private $_dataBag;
     private $_header;
 
     public function __construct()
     {
         # change this to the approprate url
-        $this->_baseUrl = "https://millennium-marathon.herokuapp.com/api/ussd/";
-        #$this->_baseUrl = "http://localhost:8080/api/ussd/";
-        $this->_requestBody = $this->getRequest();
+        $this->_baseUrl = "http://localhost:8080/api/ussd/";
 
-        $this->_header = "Millennium Marathon";
+        $this->_header = "PHP UssdFramework";
     }
 
     #############   New User Experience    #############
