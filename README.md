@@ -49,7 +49,7 @@ CREATE TABLE UssdSessions (
 Then we define the applications settings, in **/Config/settings.php**
 
 ```php
-// api rate limiter settings
+// ussd application settings
 return [
     // USSD Settings
     'appilcationPath' => '\UssdApp', # the folder that contains all your ussd applications logic
@@ -70,9 +70,9 @@ return [
     'database' => [
         // dev database settings
         'dev' => [
-            'dsn' => "mysql:host=127.0.0.1;dbname=bosch_db;charset=utf8",
-            'username' => 'root',
-            'password' => 'mich120',
+            'dsn' => "mysql:host=127.0.0.1;dbname=local_db;charset=utf8",
+            'username' => 'username',
+            'password' => '******',
         ],
 
         // prod database settings
