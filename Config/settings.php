@@ -27,13 +27,13 @@ return [
 
         // prod database settings
         'prod' => [
-            'dsn' => 'mysql:host=eu-cdbr-west-02.cleardb.net;dbname=heroku_58617ca4d053a22;charset=utf8',
-            'username' => 'b519ac75ff9d6b',
-            'password' => '18415738',
+            'dsn' => 'mysql:host=www.example.com;dbname=production_db;charset=utf8',
+            'username' => 'username',
+            'password' => 'password',
         ]
     ],
     'accessControlAllowOrigin' => [
-        'path' => "https://bosch-promo.herokuapp.com/ussd"
+        'path' => "https://example.com/ussd"
     ],        
     
     // logging settings
