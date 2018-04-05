@@ -1,0 +1,28 @@
+{
+    "name": "UssdFramework",
+    "description": "This is the USSD application",
+    "type": "project",
+    "autoload": {
+        "psr-0": {
+            "UssdFramework\\": "UssdFramework",
+            "UssdApp\\Controllers\\": "UssdApp/Controllers",
+            "Api\\":"Api"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michael Kwame Johnson",
+            "email": "mcangelo200@gmail.com"
+        },
+        {
+        	"name": "Aaron Baffour-Awuah",
+            "email": "aaron@hubtel.com"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "start": "php -S 0.0.0.0:8090",
+        "start-dev": "php -S 0.0.0.0:8090",
+        "test": "phpunit"
+    }
+}
