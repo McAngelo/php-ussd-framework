@@ -35,6 +35,7 @@ class MainController extends \UssdFramework\UssdController {
         $menu->header($this->_header)
                 ->createAndAddItem('Form Inputs', 'form_input')
                 ->createAndAddItem('Redirect', 'same_class_redirect')
+                ->createAndAddItem('Another Class', 'start', 'Second')
                 ->createAndAddItem('Render', 'render_message')
                 ->createAndAddItem('List Items', 'list_items')
                 ->createAndAddItem('Api Calls', 'api_call')
@@ -75,11 +76,6 @@ class MainController extends \UssdFramework\UssdController {
         $title = ($formData['gender'] == 'male' ? 'Mr.' : "Ms."); 
 
         $message = "\nHello $title $name\n";
-        /*$message .= "Soc.: $society \n";
-        $message .= "Name: $farmerName \n";
-        $message .= "Phone: $phoneNumber\n";
-        $message .= "Proof: $proofType - $proofNumber\n";
-        $message .= "ECOM Number: $ecomNumber\nConfirm";*/
 
         $menuHeader = "$this->_header : $message";
 

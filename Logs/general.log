@@ -1,0 +1,57 @@
+2018-04-05 17:51:34 UTC [ussd-framework-logger] DEBUG New ussd request: UssdRequest{mobile=233245366631, sessionId=v0RZFLg2L3KoLAxscP11Byd3lHbQ8bPu, serviceCode=*714*100#, type=Initiation, message=*714*100#, operator=mtn, sequence=1, clientState=, autoDialOriginated=, autoDialIndex=0} 
+2018-04-05 17:51:34 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=Response, message=PHP UssdFramework
+1. Form Inputs
+2. Redirect
+3. Another Class
+4. Render
+5. List Items
+6. Api Calls
+7. Exit
+, clientState=, exception=, nextRoute=UssdApp\MainController.menuProcessor, redirect=, autoDialOn=1} 
+2018-04-05 17:51:43 UTC [ussd-framework-logger] DEBUG New ussd request: UssdRequest{mobile=233245366631, sessionId=v0RZFLg2L3KoLAxscP11Byd3lHbQ8bPu, serviceCode=*714*100#, type=Response, message=3, operator=mtn, sequence=2, clientState=, autoDialOriginated=, autoDialIndex=0} 
+2018-04-05 17:51:43 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=, message=, clientState=, exception=, nextRoute=Second.start, redirect=1, autoDialOn=1} 
+2018-04-05 17:51:43 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=Response, message=PHP UssdFramework : 
+Welcome to another class where you can perform further object oriented development
+
+1. Thank you
+0. Gerrout
+, clientState=, exception=, nextRoute=UssdApp\SecondController.menuProcessor, redirect=, autoDialOn=1} 
+2018-04-05 17:51:53 UTC [ussd-framework-logger] DEBUG New ussd request: UssdRequest{mobile=233245366631, sessionId=v0RZFLg2L3KoLAxscP11Byd3lHbQ8bPu, serviceCode=*714*100#, type=Response, message=1, operator=mtn, sequence=3, clientState=, autoDialOriginated=, autoDialIndex=0} 
+2018-04-05 17:51:53 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=, message=, clientState=, exception=, nextRoute=UssdApp\SecondController.close, redirect=1, autoDialOn=1} 
+2018-04-05 17:51:53 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=Release, message=PHP UssdFramework 
+
+Thank you for using our USSD service at the second class, clientState=, exception=, nextRoute=, redirect=, autoDialOn=1} 
+2018-04-05 17:51:59 UTC [ussd-framework-logger] DEBUG New ussd request: UssdRequest{mobile=233245366631, sessionId=ybdkAiEZNbMZl1oFhpnPN7h1ELz9qH68, serviceCode=*714*100#, type=Initiation, message=*714*100#, operator=mtn, sequence=1, clientState=, autoDialOriginated=, autoDialIndex=0} 
+2018-04-05 17:51:59 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=Response, message=PHP UssdFramework
+1. Form Inputs
+2. Redirect
+3. Another Class
+4. Render
+5. List Items
+6. Api Calls
+7. Exit
+, clientState=, exception=, nextRoute=UssdApp\MainController.menuProcessor, redirect=, autoDialOn=1} 
+2018-04-05 17:52:06 UTC [ussd-framework-logger] DEBUG New ussd request: UssdRequest{mobile=233245366631, sessionId=ybdkAiEZNbMZl1oFhpnPN7h1ELz9qH68, serviceCode=*714*100#, type=Response, message=3, operator=mtn, sequence=2, clientState=, autoDialOriginated=, autoDialIndex=0} 
+2018-04-05 17:52:06 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=, message=, clientState=, exception=, nextRoute=Second.start, redirect=1, autoDialOn=1} 
+2018-04-05 17:52:06 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=Response, message=PHP UssdFramework : 
+Welcome to another class where you can perform further object oriented development
+
+1. Thank you
+0. Gerrout
+, clientState=, exception=, nextRoute=UssdApp\SecondController.menuProcessor, redirect=, autoDialOn=1} 
+2018-04-05 17:52:11 UTC [ussd-framework-logger] DEBUG New ussd request: UssdRequest{mobile=233245366631, sessionId=ybdkAiEZNbMZl1oFhpnPN7h1ELz9qH68, serviceCode=*714*100#, type=Response, message=0, operator=mtn, sequence=3, clientState=, autoDialOriginated=, autoDialIndex=0} 
+2018-04-05 17:52:11 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=, message=, clientState=, exception=, nextRoute=Main.start, redirect=1, autoDialOn=1} 
+2018-04-05 17:52:11 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=Response, message=PHP UssdFramework
+1. Form Inputs
+2. Redirect
+3. Another Class
+4. Render
+5. List Items
+6. Api Calls
+7. Exit
+, clientState=, exception=, nextRoute=UssdApp\MainController.menuProcessor, redirect=, autoDialOn=1} 
+2018-04-05 17:52:17 UTC [ussd-framework-logger] DEBUG New ussd request: UssdRequest{mobile=233245366631, sessionId=ybdkAiEZNbMZl1oFhpnPN7h1ELz9qH68, serviceCode=*714*100#, type=Response, message=7, operator=mtn, sequence=4, clientState=, autoDialOriginated=, autoDialIndex=0} 
+2018-04-05 17:52:17 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=, message=, clientState=, exception=, nextRoute=Main.close, redirect=1, autoDialOn=1} 
+2018-04-05 17:52:17 UTC [ussd-framework-logger] DEBUG Sending ussd response: UssdResponse{type=Release, message=PHP UssdFramework 
+
+Thank you for using our USSD service, clientState=, exception=, nextRoute=, redirect=, autoDialOn=1} 
