@@ -38,7 +38,7 @@ return [
     
     // logging settings
     'logger' => [
-        'name' => 'millennium-marathon',
+        'name' => 'ussd-framework-logger',
         'path' => __DIR__ . '/../Logs/general.log',
     ]
 ];
