@@ -6,8 +6,6 @@
 
 namespace UssdApp;
 
-use Api\ApiConnector;
-
 /**
  * Description of MainController
  *
@@ -15,16 +13,12 @@ use Api\ApiConnector;
  */
 class MainController extends \UssdFramework\UssdController {
 
-    private $_baseUrl;
     private $_header;
     private $_date;
 
     public function __construct()
     {
-        $this->_baseUrl = "http://localhost:8080/api/ussd/";
-
         $this->_header = "PHP UssdFramework";
-
         $this->_date = date('Y-m-d H:i:s', time());
     }
     
