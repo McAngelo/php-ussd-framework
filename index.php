@@ -37,16 +37,20 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 
 // Instantiate the app settings
 $settings = require __DIR__ . '/Config/settings.php';
+$settings = json_decode(json_encode($settings));
+
 
 function customDebugLogger() {
     $settings = require __DIR__ . '/Config/settings.php';
-    $log = new \Logs\BaseLog($settings['logger']['path'], $settings['logger']['name']);
+    $settings = json_decode(json_encode($settings));
+    $log = new \Logs\BaseLog($settings->logger->path, $settings->logger->name);
     $log->debug(func_get_args());
 }
 
 function customErrorLogger() {
     $settings = require __DIR__ . '/Config/settings.php';
-    $log = new \Logs\BaseLog($settings['logger']['path'], $settings['logger']['name']);
+    $settings = json_decode(json_encode($settings));
+    $log = new \Logs\BaseLog($settings->logger->path, $settings->logger->name);
     $log->error(func_get_args());    
 }
 
@@ -55,19 +59,18 @@ function customErrorLogger() {
 
 $ussd = new \UssdFramework\Ussd;
 
-if($settings['storageType'] == 'database'){
-    $ussd->store(new UssdFramework\Stores\DatabaseSessionStore($settings['database']['dev']['dsn'], $settings['database']['dev']['username'], $settings['database']['dev']['password']));    
+if($settings->storageType == 'database'){
+    $ussd->store(new UssdFramework\Stores\DatabaseSessionStore($settings->database->dev->dsn, $settings->database->dev->username, $settings->database->dev->password));    
 }
 
-if($settings['storageType'] == 'redis'){
+if($settings->storageType == 'redis'){
     $ussd->store(new UssdFramework\Stores\RedisStore($redis, $config));    
 }
 
-
-$ussd->controllerNamespaces(array($settings['appilcationPath']))
-     ->initiationController($settings['initiationController'])
-     ->initiationAction($settings['initiationAction'])
+$ussd->controllerNamespaces(array($settings->appilcationPath))
+     ->initiationController($settings->initiationController)
+     ->initiationAction($settings->initiationAction)
      ->maxAutoDialDepth(10000)
-     ->accessControlAllowOrigin($settings['accessControlAllowOrigin']);
+     ->accessControlAllowOrigin($settings->accessControlAllowOrigin);
 $ussd->service();
 

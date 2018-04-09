@@ -32,9 +32,8 @@ return [
             'password' => 'password',
         ]
     ],
-    'accessControlAllowOrigin' => [
-        'path' => "https://example.com/ussd"
-    ],        
+    
+    'accessControlAllowOrigin' =>  "https://example.com/ussd",        
     
     // logging settings
     'logger' => [
