@@ -1,4 +1,4 @@
-/vendor/
-/Config/setting.php
-/Logs/general.log
-/.phpintel
+vendor/
+Config/setting.php
+Logs/general.log
+.phpintel
