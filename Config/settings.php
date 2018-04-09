@@ -20,9 +20,9 @@ return [
     'database' => [
         // dev database settings
         'dev' => [
-            'dsn' => "mysql:host=127.0.0.1;dbname=bosch_db;charset=utf8",
+            'dsn' => "mysql:host=127.0.0.1;dbname=local_db;charset=utf8",
             'username' => 'root',
-            'password' => 'mich120',
+            'password' => 'password',
         ],
 
         // prod database settings
