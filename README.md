@@ -37,12 +37,12 @@ Clone the repository unto your machine/server, then navigate into the project.
 First , we create the table UssdSessions where all session requests and responses are registered
 
 ```sql
-CREATE TABLE UssdSessions (
-  UssdSessionId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  SessionId VARCHAR(36) NOT NULL,
-  Sequence INT NOT NULL,
-  ClientState TEXT NOT NULL,
-  DateCreated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE ussd_sessions (
+  ussd_sessionId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  session_id VARCHAR(36) NOT NULL,
+  sequence INT NOT NULL,
+  client_state TEXT NOT NULL,
+  date_created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 ```
 
