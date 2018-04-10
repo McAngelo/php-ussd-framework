@@ -193,7 +193,7 @@ class MainController extends \UssdFramework\UssdController {
 
         $menu = new \UssdFramework\UssdMenu();
         $menu->header($menuHeader)
-                ->createAndAddItem('Thank you', 'close')
+                ->createAndAddItem('Thank you', 'you_welcome')
                 ->addItem(new \UssdFramework\UssdMenuItem('0', 'Gerrout', 'start'));
         return $this->renderMenu($menu);
     }
