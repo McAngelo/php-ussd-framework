@@ -65,9 +65,9 @@ class MainController extends \UssdFramework\UssdController {
         $formData = $this->getFormData();
 
         $name = $formData['name'];
-        $society = $formData['gender'];    
+        $gender = $formData['gender'];    
 
-        $title = ($formData['gender'] == 'male' ? 'Mr.' : "Ms."); 
+        $title = ($gender == 'male' ? 'Mr.' : "Ms."); 
 
         $message = "\nHello $title $name\n";
 

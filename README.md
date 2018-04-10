@@ -70,7 +70,7 @@ return [
     'database' => [
         // dev database settings
         'dev' => [
-            'dsn' => "mysql:host=127.0.0.1;dbname=local_db;charset=utf8",
+            'dsn' => "mysql:host=127.0.0.1;dbname=local_db;charset=utf8",# change only the dbname to your actual dbname
             'username' => 'username',
             'password' => '******',
         ],
@@ -102,6 +102,8 @@ Execute either of the following commands
 
 ```bash
 composer start
+
+or
 
 composer.phar start
 ``` 
@@ -181,9 +183,9 @@ class MainController extends \UssdFramework\UssdController {
         $formData = $this->getFormData();
 
         $name = $formData['name'];
-        $society = $formData['gender'];    
+        $gender = $formData['gender'];    
 
-        $title = ($formData['gender'] == 'male' ? 'Mr.' : "Ms."); 
+        $title = ($gender == 'male' ? 'Mr.' : "Ms."); 
 
         $message = "\nHello $title $name\n";
 
