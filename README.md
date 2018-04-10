@@ -38,7 +38,7 @@ First , we create the table UssdSessions where all session requests and response
 
 ```sql
 CREATE TABLE ussd_sessions (
-  ussd_sessionId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  ussd_session_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   session_id VARCHAR(36) NOT NULL,
   sequence INT NOT NULL,
   client_state TEXT NOT NULL,

@@ -64,7 +64,7 @@ if($settings->storageType == 'database'){
 }
 
 if($settings->storageType == 'redis'){
-    $ussd->store(new UssdFramework\Stores\RedisStore($redis, $config));    
+    $ussd->store(new UssdFramework\Stores\RedisStore($settings->dev->redis, $settings->dev->config));    
 }
 
 $ussd->controllerNamespaces(array($settings->appilcationPath))
