@@ -137,7 +137,7 @@ class MainController extends \UssdFramework\UssdController {
         $this->_date = date('Y-m-d H:i:s', time());
     }
     
-    # Main startup method/action for the USSD
+    # Main startup method/action for the USSD initiates the USSD session
     public function start()
     {
         $menu = new \UssdFramework\UssdMenu();
@@ -152,7 +152,7 @@ class MainController extends \UssdFramework\UssdController {
         return $this->renderMenu($menu);
     }
 
-    # Check whether the user's phone number exists
+    # Responds with a USSD form
     public function form_input()
     {
         $formHeader = "$this->_header\n";
@@ -175,6 +175,7 @@ class MainController extends \UssdFramework\UssdController {
         return $this->renderForm($form);
     }
 
+    # Processes the USSD form
     public function process_form_input()
     {
         $formData = $this->getFormData();
@@ -195,12 +196,14 @@ class MainController extends \UssdFramework\UssdController {
         return $this->renderMenu($menu);
     }
 
+    # Displays a welcome message and releases the USSD session
     public function you_welcome()
     {
         $message = "$this->_header \n\nYou are welcome and have a nice day";
         return $this->render($message);
     }
 
+    # List menu items
     public function list_items()
     {
         $menu = new \UssdFramework\UssdMenu();
@@ -217,25 +220,26 @@ class MainController extends \UssdFramework\UssdController {
         return $this->renderMenu($menu);
     }
 
-    # display the menu
+    # redirects to the start menu
     public function e_menu(){
 
         return $this->redirect('start');
     }
 
-     # Check whether the user's phone number exists
+     # Redirects to an action/function/method
     public function same_class_redirect()
     {
         return $this->redirect("redirect_message");
     }
 
+    # Redirect and stop
     public function redirect_message()
     {
         $message = "$this->_header \n\nYou were redirected here";
         return $this->render($message);
     }
 
-    # Close user's USSD session
+    # Displays a message and releases
     public function render_message()
     {
         # closing message
